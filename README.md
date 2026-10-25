@@ -1,6 +1,6 @@
-# care-manager-site
+# togethertend-site
 
-One-page landing page for Care Manager, a pre-launch iPhone app that helps adult children and siblings coordinate care for an aging parent. Plain HTML and CSS: `index.html`, `styles.css`, `favicon.svg`. No build step, no JavaScript, no analytics or cookies. The only external request is Google Fonts (Baloo 2 and Nunito).
+One-page landing page for TogetherTend, a pre-launch iPhone app that helps adult children and siblings coordinate care for an aging parent. Plain HTML and CSS: `index.html`, `styles.css`, `favicon.svg`. No build step, no JavaScript, no analytics or cookies. The only external request is Google Fonts (Baloo 2 and Nunito).
 
 ## Preview locally
 
@@ -13,7 +13,7 @@ python3 -m http.server 8000
 
 ## Publishing
 
-All paths are relative, so it works at `/care-manager-site/`. Published by GitHub Pages from `main` (root) at https://andyhe886.github.io/care-manager-site/.
+All paths are relative, so it works at `/togethertend-site/`. Published by GitHub Pages from `main` (root) at https://andyhe886.github.io/togethertend-site/.
 
 ## Pilot sign-up form
 
