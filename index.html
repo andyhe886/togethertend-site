@@ -14,6 +14,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<!-- PostHog analytics (US cloud). Form fields are masked in session replay; no names or emails are sent as events. -->
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister identify setPersonProperties reset get_distinct_id startSessionRecording stopSessionRecording opt_in_capturing opt_out_capturing has_opted_out_capturing set_config".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_zWjmQagZ26uNxkaRotEzDvH99BrEo2z7cEtSsRwnjEMk',{api_host:'https://us.i.posthog.com',person_profiles:'identified_only',session_recording:{maskAllInputs:true}});
+document.addEventListener('DOMContentLoaded',function(){var f=document.querySelector('form.signup');if(f){f.addEventListener('submit',function(){posthog.capture('pilot_signup',{},{transport:'sendBeacon'});});}document.querySelectorAll('a[href="#join"]').forEach(function(a){a.addEventListener('click',function(){posthog.capture('join_cta_clicked');});});});
+</script>
 </head>
 <body>
 
@@ -257,7 +263,7 @@
           <button class="btn big-submit" type="submit">Join the pilot</button>
           <p class="fine">Please don't share health details here.</p>
           <p class="fine"><strong>What happens next:</strong> we'll email you within a day to say hi and ask a couple of questions. If it's a fit, we'll set your family up in the pilot.</p>
-          <p class="fine"><strong>Your info:</strong> we use your details only to contact you about the pilot. We never sell or share them. To be removed, email <a href="mailto:andy@togethertend.com">andy@togethertend.com</a>.</p>
+          <p class="fine"><strong>Your info:</strong> we use your details only to contact you about the pilot. We use privacy-friendly analytics (PostHog) to see how people use this page; form fields are never recorded. We never sell or share them. To be removed, email <a href="mailto:andy@togethertend.com">andy@togethertend.com</a>.</p>
         </form>
 
       </div>
