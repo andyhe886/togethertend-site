@@ -159,3 +159,12 @@ footer strong{color:var(--text)}
 .big-submit{display:flex;justify-content:center;width:100%;border:0;cursor:pointer;font-size:1.5rem;min-height:60px;margin-top:.4rem}
 .big-submit:focus-visible{outline:4px solid var(--text);outline-offset:4px}
 @media (max-width:359px){.radios{grid-template-columns:1fr}}
+
+/* Real app screenshots */
+.shot-row{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.shot-row li{text-align:center}
+.shot-row img,.soon img.shot{display:block;width:100%;max-width:260px;height:auto;margin:0 auto;background:var(--text);border:10px solid var(--text);border-radius:40px;box-shadow:0 6px 0 var(--coral-edge)}
+.shot-row p{margin:14px 0 0;color:var(--text2);font-size:1rem;line-height:1.4}
+.shot-row strong{display:block;color:var(--text);font-size:1.1rem}
+@media (max-width:900px){.shot-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.shot-row{gap:16px}.shot-row img{border-width:6px;border-radius:26px}.shot-row p{font-size:.9rem}}
